@@ -1,0 +1,240 @@
+<!--
+================================================================================
+CyberBridge - Home Page (index.html)
+================================================================================
+Author: Manhith Ransilu Sanjeewa (Student ID: 10686639)
+Course: GDI2100 Web Design - Edith Cowan University
+Version: Assignment 2 - Final Website
+Date: 06/02/2026
+
+Structure (following proposal wireframe):
+1. Header - Site branding
+2. Navigation - Main site navigation
+3. Hero Section - Welcome banner with background image
+4. Welcome Article - Introduction to CyberBridge
+5. Feature Cards - Three-column layout with Latest Alerts, Popular Tutorials, Safety Tips
+6. Footer - Contact information and copyright
+================================================================================
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 
+    META TAGS
+    charset: Specifies UTF-8 character encoding for proper text display
+    viewport: Essential for responsive design - controls layout on mobile devices
+  -->
+
+        <!-- 
+    SEO META TAGS
+    description: Helps search engines understand page content
+    author: Credits the page creator
+  -->
+        <meta
+            name="description"
+            content="CyberBridge - A beginner's cybersecurity learning and safety hub designed for 
+                                    university students. Learn to protect your digital identity.">
+        <meta name="author" content="Manhith Ransilu Sanjeewa">
+
+        <!-- Page title -->
+        <title>CyberBridge - Home | Cybersecurity Learning Hub</title>
+
+        <!-- EXTERNAL STYLESHEET LINK -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- 
+    HEADER SECTION
+    Contains the site branding
+    This appears consistently across all pages for brand recognition
+  -->
+        <header>
+            <div class="wrapper">
+                <!-- Main site title -->
+                <h1>CyberBridge</h1>
+                <!-- Tagline -->
+                <p>Beginner's Cybersecurity Learning &amp; Safety Hub</p>
+            </div>
+        </header>
+
+        <!-- 
+    NAVIGATION SECTION
+    Main site navigation using semantic nav element
+  -->
+        <nav>
+            <ul>
+                <!-- 
+        Navigation links to all 5 pages
+        Current page (Home) is marked with 'active' class for visual indication
+      -->
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="tutorials.html">Learning Hub</a></li>
+                <li><a href="safety_tips.html">Safety Tips</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- 
+    MAIN CONTENT AREA
+    Contains the primary content of the page
+  -->
+        <main>
+            <!-- 
+      HERO SECTION
+      Large banner with background image creating visual impact
+    -->
+            <section class="hero hero--with-image" aria-label="Welcome banner">
+                <h2>Welcome to CyberBridge</h2>
+                <p>
+                    Your trusted guide to understanding and practicing cybersecurity in your everyday digital life as a
+                    university student.
+                </p>
+            </section>
+
+            <div class="wrapper">
+                <!-- 
+        WELCOME ARTICLE
+        Using article element as this is self-contained content
+      -->
+                <article>
+                    <h2>About CyberBridge</h2>
+                    <p>
+                        <strong>CyberBridge</strong> is an educational initiative designed specifically for university
+                        students. We translate complex cybersecurity terminology into clear, relatable explanations
+                        grounded in real student experiences.
+                    </p>
+                    <p>
+                        In today's interconnected world, students face unique digital challenges. From sharing devices
+                        in computer labs to connecting to campus Wi-Fi networks, your digital footprint is constantly at
+                        risk. CyberBridge helps you understand these risks and provides practical strategies to protect
+                        yourself.
+                    </p>
+                    <p>This platform focuses on real-world scenarios including:</p>
+                    <ul>
+                        <li>Safe campus Wi-Fi usage and public network security</li>
+                        <li>Protecting shared devices in libraries and labs</li>
+                        <li>Securing your learning management system accounts</li>
+                        <li>Smart social media practices for students</li>
+                        <li>Recognising phishing attempts targeting student accounts</li>
+                    </ul>
+                </article>
+
+                <!-- 
+        FEATURE CARDS SECTION
+        Three-column grid layout showcasing main site features
+      -->
+                <section aria-label="Featured content">
+                    <h2>What's New at CyberBridge</h2>
+
+                    <div class="card-grid">
+                        <!-- LATEST ALERTS CARD -->
+                        <div class="card card--alert">
+                            <h3>🚨 Latest Security Alerts</h3>
+                            <p>Stay informed about current threats:</p>
+                            <ul>
+                                <li>
+                                    <div class="alert alert--critical">
+                                        <strong>Critical:</strong> Phishing emails targeting ECU student accounts have
+                                        increased. Do not click suspicious links!
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="alert alert--warning">
+                                        <strong>Warning:</strong> Fake scholarship scams circulating on social media.
+                                        Verify all offers through official channels.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="alert alert--info">
+                                        <strong>Info:</strong> New security update available for Microsoft Office 365.
+                                        Update your applications today.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- POPULAR TUTORIALS CARD -->
+                        <div class="card">
+                            <h3>📚 Popular Tutorials</h3>
+                            <p>Start your cybersecurity journey:</p>
+                            <ul>
+                                <li>
+                                    <a href="tutorials.html#module1">How the Web Works</a>
+                                    <p>Understand internet fundamentals</p>
+                                </li>
+                                <li>
+                                    <a href="tutorials.html#module2">Identifying Everyday Threats</a>
+                                    <p>Recognise common cyber attacks</p>
+                                </li>
+                                <li>
+                                    <a href="tutorials.html#module3">Protecting Your Digital Identity</a>
+                                    <p>Secure your online presence</p>
+                                </li>
+                                <li>
+                                    <a href="tutorials.html">View All Modules →</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SAFETY TIPS CARD -->
+                        <div class="card">
+                            <h3>🛡️ Student Safety Tips</h3>
+                            <p>Quick protective measures:</p>
+                            <ul>
+                                <li>
+                                    <strong>Use Strong Passphrases</strong>
+                                    <p>Create memorable but secure passwords</p>
+                                </li>
+                                <li>
+                                    <strong>Enable Multi-Factor Authentication</strong>
+                                    <p>Add extra security to your accounts</p>
+                                </li>
+                                <li>
+                                    <strong>Think Before You Click</strong>
+                                    <p>Verify links before opening them</p>
+                                </li>
+                                <li>
+                                    <a href="safety_tips.html">Learn More Safety Tips →</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CALL TO ACTION SECTION -->
+                <article class="text-center">
+                    <h2>Ready to Start Learning?</h2>
+                    <p>
+                        Our structured learning path will take you from cybersecurity basics to advanced protective
+                        strategies. Whether you're a first-year student or a postgraduate researcher, CyberBridge has
+                        resources tailored to your needs.
+                    </p>
+                    <p>
+                        <a href="tutorials.html" class="button"> Explore the Learning Hub → </a>
+                    </p>
+                </article>
+            </div>
+        </main>
+
+        <!-- 
+    FOOTER SECTION
+    Contains copyright information and contact details
+    Consistent across all pages for navigation convenience
+  -->
+        <footer>
+            <div class="wrapper">
+                <!-- Copyright notice -->
+                <p>&copy; 2026 CyberBridge Initiative. All rights reserved.</p>
+                <!-- Contact email with mailto link -->
+                <p>
+                    Help Desk:
+                    <a href="mailto:info@cyberbridge.edu">info@cyberbridge.edu</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

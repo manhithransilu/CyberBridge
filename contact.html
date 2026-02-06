@@ -1,0 +1,251 @@
+<!--
+================================================================================
+CyberBridge - Contact Page (contact.html)
+================================================================================
+Author: Manhith Ransilu Sanjeewa (Student ID: 10686639)
+Course: GDI2100 Web Design - Edith Cowan University
+Version: Assignment 2 - Final Website
+Date: 06/02/2026
+
+Content Structure:
+1. Header - Site branding
+2. Navigation - Main site navigation
+3. Contact Information - CyberBridge and ECU details
+4. Google Maps Embed - Interactive campus map (mashup)
+5. Footer - Contact information and copyright
+================================================================================
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Character encoding and responsive viewport -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- SEO metadata -->
+        <meta
+            name="description"
+            content="Contact CyberBridge - Get in touch with our cybersecurity education team at 
+                                    Edith Cowan University, Mount Lawley Campus.">
+        <meta name="author" content="Manhith Ransilu Sanjeewa">
+
+        <!-- Page title -->
+        <title>Contact | CyberBridge - Get in Touch</title>
+
+        <!-- External stylesheet link -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- HEADER SECTION -->
+        <header>
+            <div class="wrapper">
+                <h1>CyberBridge</h1>
+                <p>Beginner's Cybersecurity Learning &amp; Safety Hub</p>
+            </div>
+        </header>
+
+        <!-- NAVIGATION SECTION -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tutorials.html">Learning Hub</a></li>
+                <li><a href="safety_tips.html">Safety Tips</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <!-- Current page marked as active -->
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTENT AREA -->
+        <main>
+            <div class="wrapper">
+                <!-- Page introduction -->
+                <article>
+                    <h2>Get in Touch</h2>
+                    <p>
+                        Have questions about cybersecurity? Need help with a security concern? The CyberBridge team is
+                        here to help. Use the contact information below for general enquiries related to cybersecurity
+                        awareness and student safety.
+                    </p>
+                    <p>
+                        <strong>Note:</strong> For urgent security incidents (such as suspected account compromise or
+                        ongoing attacks), please contact your university's IT helpdesk directly for immediate
+                        assistance.
+                    </p>
+                </article>
+
+                <!-- 
+        CONTACT GRID
+        Two-column layout: Contact info + Map
+      -->
+                <div class="contact-grid">
+                    <!-- CONTACT INFORMATION SECTION -->
+                    <div class="contact-info">
+                        <h3>CyberBridge Initiative</h3>
+
+                        <!-- Using address element for contact information -->
+                        <address>
+                            <p>
+                                <strong>Organisation:</strong><br>
+                                CyberBridge Initiative<br>
+                                Edith Cowan University
+                            </p>
+
+                            <p>
+                                <strong>Campus Location:</strong><br>
+                                Mount Lawley Campus<br>
+                                2 Bradford Street<br>
+                                Mount Lawley, WA 6050<br>
+                                Australia
+                            </p>
+
+                            <p>
+                                <strong>General Enquiries:</strong><br>
+                                <!-- mailto: link opens user's default email -->
+                                <a href="mailto:info@cyberbridge.edu">info@cyberbridge.edu</a>
+                            </p>
+
+                            <p>
+                                <strong>Technical Support:</strong><br>
+                                <a href="mailto:support@cyberbridge.edu">support@cyberbridge.edu</a>
+                            </p>
+                        </address>
+
+                        <h3>University IT Support</h3>
+                        <address>
+                            <p>For urgent security matters or account issues, contact the ECU IT Service Desk:</p>
+                            <p>
+                                <strong>Phone:</strong> 134 ECU (134 328)<br>
+                                <strong>Email:</strong>
+                                <a href="mailto:itservicedesk@ecu.edu.au">itservicedesk@ecu.edu.au</a>
+                            </p>
+                        </address>
+
+                        <h3>Office Hours</h3>
+                        <p>
+                            <strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM (AWST)<br>
+                            <strong>Saturday - Sunday:</strong> Closed
+                        </p>
+                        <p>
+                            <em>Responses to email enquiries are typically provided within 2-3 business days.</em>
+                        </p>
+                    </div>
+
+                    <!-- 
+          GOOGLE MAPS SECTION
+          Embedded map showing ECU Mount Lawley campus location
+        -->
+                    <div class="map-container">
+                        <h3>Campus Location</h3>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32028471.104884822!2d75.83892570902235!3d-11.499716369447976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2bcd534f8d106521%3A0xd459bc42f3341f4!2sEdith%20Cowan%20University!5e0!3m2!1sen!2slk!4v1770382557821!5m2!1sen!2slk"
+                            width="600"
+                            height="450"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Google Maps showing ECU Mount Lawley Campus location"></iframe>
+                        <p>
+                            <small>
+                                <a href="https://goo.gl/maps/example" target="_blank" rel="noopener">
+                                    View larger map →
+                                </a>
+                            </small>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ADDITIONAL CONTACT OPTIONS -->
+                <section aria-label="Additional contact options">
+                    <h2>Connect With Us</h2>
+
+                    <article>
+                        <h3>Report a Security Concern</h3>
+                        <p>
+                            If you've encountered a phishing attempt, suspicious email, or potential security threat
+                            targeting students, we want to hear about it. Your reports help us warn the broader student
+                            community.
+                        </p>
+                        <p>
+                            <strong>Report to:</strong>
+                            <a href="mailto:security@cyberbridge.edu">security@cyberbridge.edu</a>
+                        </p>
+                        <p>
+                            Please include as much detail as possible: screenshots of the suspicious content (don't
+                            click any links!), sender information, and the date/time you received it.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Request a Workshop</h3>
+                        <p>
+                            CyberBridge offers interactive cybersecurity awareness workshops for student groups, clubs,
+                            and academic departments. Our sessions cover topics from basic security hygiene to advanced
+                            threat recognition.
+                        </p>
+                        <p>
+                            <strong>Workshop enquiries:</strong>
+                            <a href="mailto:workshops@cyberbridge.edu">workshops@cyberbridge.edu</a>
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Contribute to CyberBridge</h3>
+                        <p>
+                            Are you passionate about cybersecurity education? We welcome student contributors, guest
+                            writers, and volunteer educators. Get in touch to learn about opportunities to get involved.
+                        </p>
+                        <p>
+                            <strong>Volunteer enquiries:</strong>
+                            <a href="mailto:volunteer@cyberbridge.edu">volunteer@cyberbridge.edu</a>
+                        </p>
+                    </article>
+                </section>
+
+                <!-- FAQ SECTION -->
+                <section aria-label="Frequently asked questions">
+                    <h2>Frequently Asked Questions</h2>
+
+                    <article>
+                        <h3>My university account was hacked. What should I do?</h3>
+                        <p>
+                            Contact your university IT Service Desk immediately (134 ECU). They can lock your account,
+                            reset your password, and investigate the breach. After regaining access, enable MFA and
+                            review your account for any unauthorised changes.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Is there a cost for CyberBridge resources?</h3>
+                        <p>
+                            All CyberBridge resources are completely free for university students, staff, and faculty.
+                            Our mission is to make cybersecurity education accessible to everyone.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Can I use CyberBridge materials for my own presentations?</h3>
+                        <p>
+                            Yes! We encourage the sharing of cybersecurity knowledge. Please credit CyberBridge as the
+                            source and link back to our website where possible. For commercial use, please contact us
+                            first.
+                        </p>
+                    </article>
+                </section>
+            </div>
+        </main>
+
+        <!-- FOOTER SECTION -->
+        <footer>
+            <div class="wrapper">
+                <p>&copy; 2026 CyberBridge Initiative. All rights reserved.</p>
+                <p>
+                    Help Desk:
+                    <a href="mailto:info@cyberbridge.edu">info@cyberbridge.edu</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

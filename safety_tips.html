@@ -1,0 +1,349 @@
+<!--
+================================================================================
+CyberBridge - Safety Tips Page (safety_tips.html)
+================================================================================
+Author: Manhith Ransilu Sanjeewa (Student ID: 10686639)
+Course: GDI2100 Web Design - Edith Cowan University
+Version: Assignment 2 - Final Website
+Date: 06/02/2026
+
+Content Structure:
+1. Header - Site branding
+2. Navigation - Main site navigation  
+3. Introduction - Overview of protective habits
+4. Core 4 Habits (with numbered cards):
+   - Strong Passphrases
+   - Multi-Factor Authentication
+   - Phishing Recognition
+   - Prompt Software Updates
+5. Additional Tips - Extra security guidance
+6. Footer - Contact information and copyright
+================================================================================
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Character encoding and responsive viewport -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- SEO metadata -->
+        <meta
+            name="description"
+            content="CyberBridge Safety Tips - Learn the Core 4 protective habits: strong passphrases,
+                                    multi-factor authentication, phishing recognition, and software updates.">
+        <meta name="author" content="Manhith Ransilu Sanjeewa">
+
+        <!-- Page title -->
+        <title>Safety Tips | CyberBridge - Core 4 Protective Habits</title>
+
+        <!-- External stylesheet link -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- HEADER SECTION -->
+        <header>
+            <div class="wrapper">
+                <h1>CyberBridge</h1>
+                <p>Beginner's Cybersecurity Learning &amp; Safety Hub</p>
+            </div>
+        </header>
+
+        <!-- NAVIGATION SECTION -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tutorials.html">Learning Hub</a></li>
+                <!-- Current page marked as active -->
+                <li><a href="safety_tips.html" class="active">Safety Tips</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTENT AREA -->
+        <main>
+            <div class="wrapper">
+                <!-- PAGE INTRODUCTION -->
+                <article>
+                    <h2>The "Core 4" Protective Habits</h2>
+                    <p>
+                        In the complex world of cybersecurity, it's easy to feel overwhelmed by the sheer number of
+                        threats and protective measures. That's why we've distilled essential security practices into
+                        the <strong>"Core 4"</strong> — four fundamental habits that, when practiced consistently,
+                        dramatically reduce your risk of falling victim to cyber attacks.
+                    </p>
+                    <p>
+                        These habits are designed specifically for university students who may be managing multiple
+                        accounts, using various devices, and accessing sensitive academic resources. Master these four
+                        practices, and you'll have a solid foundation for your digital security.
+                    </p>
+                </article>
+
+                <!-- 
+        CORE 4 HABITS SECTION
+        Uses CSS counters for automatic numbering
+        Each habit is an article for semantic structure
+      -->
+                <section aria-label="Core four protective habits">
+                    <h2>Master These Four Habits</h2>
+
+                    <div class="habit-list">
+                        <!-- HABIT 1 -->
+                        <article class="habit" id="habit1">
+                            <h3>Strong Passphrases</h3>
+                            <p>
+                                <strong>Why it matters:</strong> Weak passwords are the leading cause of account
+                                compromises. Attackers use automated tools that can crack simple passwords in seconds,
+                                but strong passphrases can take centuries to break.
+                            </p>
+                            <p>
+                                <strong>What to do:</strong> Instead of using complex passwords with random symbols
+                                (which are hard to remember), use passphrases — long phrases made of random words. For
+                                example, "correct-horse-battery-staple" is both memorable and extremely secure.
+                            </p>
+                            <h4>Practical Tips:</h4>
+                            <ul>
+                                <li>
+                                    <strong>Length over complexity:</strong> A 20-character passphrase with common words
+                                    is stronger than an 8-character password with symbols
+                                </li>
+                                <li>
+                                    <strong>Use a password manager:</strong> Tools like Bitwarden (free), 1Password, or
+                                    LastPass can generate and store unique passphrases for every account
+                                </li>
+                                <li>
+                                    <strong>Never reuse passwords:</strong> If one account is breached, all accounts
+                                    with the same password become vulnerable
+                                </li>
+                                <li>
+                                    <strong>Change passwords if compromised:</strong> Use
+                                    <a href="https://haveibeenpwned.com" target="_blank" rel="noopener">
+                                        Have I Been Pwned</a
+                                    >
+                                    to check if your email has appeared in data breaches
+                                </li>
+                            </ul>
+                            <div class="alert alert--info">
+                                <strong>Student Tip:</strong> Your university account password should be unique and
+                                never used for any other service!
+                            </div>
+                        </article>
+
+                        <!-- HABIT 2 -->
+                        <article class="habit" id="habit2">
+                            <h3>Multi-Factor Authentication (MFA)</h3>
+                            <p>
+                                <strong>Why it matters:</strong> Even the strongest password can be stolen through
+                                phishing or data breaches. MFA adds an additional verification step, so even if an
+                                attacker has your password, they still can't access your account without the second
+                                factor.
+                            </p>
+                            <p>
+                                <strong>What to do:</strong> Enable MFA on every account that offers it, especially
+                                email, banking, social media, and your university accounts. Most services now offer this
+                                feature in their security settings.
+                            </p>
+                            <h4>Types of MFA (from most to least secure):</h4>
+                            <ul>
+                                <li>
+                                    <strong>Hardware security keys:</strong> Physical devices like YubiKey — most secure
+                                    but requires purchasing a device
+                                </li>
+                                <li>
+                                    <strong>Authenticator apps:</strong> Google Authenticator, Microsoft Authenticator,
+                                    or Authy — generate time-based codes
+                                </li>
+                                <li>
+                                    <strong>Push notifications:</strong> Approve logins from your phone — convenient and
+                                    reasonably secure
+                                </li>
+                                <li>
+                                    <strong>SMS codes:</strong> Better than nothing, but vulnerable to SIM swapping
+                                    attacks — use other methods when available
+                                </li>
+                            </ul>
+                            <h4>How to Enable MFA:</h4>
+                            <ol>
+                                <li>Go to your account's security or privacy settings</li>
+                                <li>Look for "Two-Factor Authentication" or "Two-Step Verification"</li>
+                                <li>Choose your preferred method and follow the setup instructions</li>
+                                <li>Save your backup codes in a secure location</li>
+                            </ol>
+                            <div class="alert alert--warning">
+                                <strong>Important:</strong> Always save your MFA backup codes! If you lose access to
+                                your phone, these codes are your only way back into your accounts.
+                            </div>
+                        </article>
+
+                        <!-- HABIT 3 -->
+                        <article class="habit" id="habit3">
+                            <h3>Phishing Recognition</h3>
+                            <p>
+                                <strong>Why it matters:</strong> Phishing attacks trick you into revealing sensitive
+                                information by impersonating trusted entities. They're the most common attack vector
+                                against students, often disguised as messages from the university, financial aid, or
+                                popular services.
+                            </p>
+                            <p>
+                                <strong>What to do:</strong> Always verify before you click. Legitimate organisations
+                                rarely ask for sensitive information via email, and urgent or threatening language is a
+                                major red flag.
+                            </p>
+                            <h4>Red Flags to Watch For:</h4>
+                            <ul>
+                                <li>
+                                    <strong>Urgency or threats:</strong> "Act now or your account will be suspended!" —
+                                    legitimate services rarely use this language
+                                </li>
+                                <li>
+                                    <strong>Suspicious sender addresses:</strong> Check the actual email address, not
+                                    just the display name (e.g., "ECU IT" but from randomaddress@gmail.com)
+                                </li>
+                                <li>
+                                    <strong>Generic greetings:</strong> "Dear Student" or "Dear User" instead of your
+                                    actual name
+                                </li>
+                                <li>
+                                    <strong>Spelling and grammar errors:</strong> Professional organisations proofread
+                                    their communications
+                                </li>
+                                <li>
+                                    <strong>Suspicious links:</strong> Hover over links to see the actual URL before
+                                    clicking — does it match the claimed sender?
+                                </li>
+                                <li>
+                                    <strong>Requests for sensitive information:</strong> Universities and banks never
+                                    ask for passwords via email
+                                </li>
+                            </ul>
+                            <h4>What to Do If You Receive a Suspicious Message:</h4>
+                            <ol>
+                                <li>Don't click any links or download attachments</li>
+                                <li>Report it to your IT department or email provider</li>
+                                <li>If unsure, contact the supposed sender through official channels</li>
+                                <li>Delete the message</li>
+                            </ol>
+                            <div class="alert alert--critical">
+                                <strong>Already clicked a suspicious link?</strong> Immediately change your password,
+                                enable MFA if not already active, and report the incident to your university IT
+                                helpdesk.
+                            </div>
+                        </article>
+
+                        <!-- HABIT 4 -->
+                        <article class="habit" id="habit4">
+                            <h3>Prompt Software Updates</h3>
+                            <p>
+                                <strong>Why it matters:</strong> Software updates aren't just about new features — they
+                                often contain critical security patches that fix known vulnerabilities. Delaying updates
+                                leaves your devices exposed to attacks that exploit these weaknesses.
+                            </p>
+                            <p>
+                                <strong>What to do:</strong> Enable automatic updates wherever possible. When you
+                                receive an update notification, install it as soon as practical — don't dismiss it
+                                repeatedly.
+                            </p>
+                            <h4>What to Keep Updated:</h4>
+                            <ul>
+                                <li>
+                                    <strong>Operating system:</strong> Windows, macOS, iOS, Android — these updates are
+                                    critical and should be installed promptly
+                                </li>
+                                <li>
+                                    <strong>Web browsers:</strong> Chrome, Firefox, Safari, Edge — browsers are a
+                                    primary target for attacks
+                                </li>
+                                <li>
+                                    <strong>Applications:</strong> Especially Microsoft Office, Adobe products, and any
+                                    software that handles sensitive data
+                                </li>
+                                <li>
+                                    <strong>Antivirus/security software:</strong> Only effective if it has the latest
+                                    threat definitions
+                                </li>
+                                <li>
+                                    <strong>Mobile apps:</strong> Update apps from the official app store, not from
+                                    random links
+                                </li>
+                                <li>
+                                    <strong>Router firmware:</strong> Often forgotten, but your home router needs
+                                    updates too
+                                </li>
+                            </ul>
+                            <h4>Best Practices:</h4>
+                            <ul>
+                                <li>Enable automatic updates on all devices</li>
+                                <li>Check for updates at least weekly if automatic updates aren't available</li>
+                                <li>Restart your devices regularly to complete pending updates</li>
+                                <li>Only download software and updates from official sources</li>
+                            </ul>
+                            <div class="alert alert--info">
+                                <strong>Pro Tip:</strong> Schedule a weekly "update check" — maybe Sunday evening before
+                                the new week starts. It only takes a few minutes and can prevent major headaches.
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- ADDITIONAL TIPS SECTION -->
+                <section aria-label="Additional security tips">
+                    <h2>Additional Security Tips for Students</h2>
+
+                    <article>
+                        <h3>Quick Wins for Better Security</h3>
+                        <p>Beyond the Core 4, here are additional practices that enhance your digital security:</p>
+                        <ul>
+                            <li>
+                                <strong>Lock your devices:</strong> Always lock your laptop, tablet, or phone when
+                                stepping away, even briefly
+                            </li>
+                            <li>
+                                <strong>Use a VPN on public Wi-Fi:</strong> Coffee shop or airport Wi-Fi? Use a VPN to
+                                encrypt your connection
+                            </li>
+                            <li>
+                                <strong>Back up your data:</strong> Regular backups protect against ransomware and
+                                device failure
+                            </li>
+                            <li>
+                                <strong>Review app permissions:</strong> Does that game really need access to your
+                                contacts and location?
+                            </li>
+                            <li>
+                                <strong>Be cautious with USB devices:</strong> Don't plug in unknown USB drives — they
+                                can contain malware
+                            </li>
+                            <li>
+                                <strong>Log out of shared computers:</strong> Always log out and clear the browser when
+                                using library or lab computers
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <!-- Call to action -->
+                <article class="text-center mt-2">
+                    <h2>Ready to Learn More?</h2>
+                    <p>
+                        Explore our <a href="tutorials.html">Learning Hub</a> for in-depth tutorials, or check out the
+                        <a href="resources.html">Resources</a>
+                        page for trusted external links and our comprehensive glossary.
+                    </p>
+                </article>
+            </div>
+        </main>
+
+        <!-- FOOTER SECTION -->
+        <footer>
+            <div class="wrapper">
+                <p>&copy; 2026 CyberBridge Initiative. All rights reserved.</p>
+                <p>
+                    Help Desk:
+                    <a href="mailto:info@cyberbridge.edu">info@cyberbridge.edu</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

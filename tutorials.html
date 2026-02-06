@@ -1,0 +1,323 @@
+<!--
+================================================================================
+CyberBridge - Learning Hub Page (tutorials.html)
+================================================================================
+Author: Manhith Ransilu Sanjeewa (Student ID: 10686639)
+Course: GDI2100 Web Design - Edith Cowan University
+Version: Assignment 2 - Final Website
+Date: 06/02/2026
+
+Content Structure:
+1. Header - Site branding
+2. Navigation - Main site navigation
+3. Introduction - Overview of learning path
+4. Learning Modules (5 modules with icons, descriptions, and key points):
+   - Module 1: How the Web Works
+   - Module 2: Identifying Everyday Threats
+   - Module 3: Protecting Your Digital Identity
+   - Module 4: Safe Social Media Practices
+   - Module 5: Campus Network Security
+5. Footer - Contact information and copyright
+================================================================================
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"><!-- Character encoding and responsive viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- SEO metadata -->
+        <meta
+            name="description"
+            content="CyberBridge Learning Hub - Structured cybersecurity learning modules for
+                     university students. Learn about web security, threats, and digital identity protection.">
+        <meta name="author" content="Manhith Ransilu Sanjeewa">
+
+        <!-- Page title -->
+        <title>Learning Hub | CyberBridge - Cybersecurity Tutorials</title>
+
+        <!-- External stylesheet link -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- 
+    HEADER SECTION
+    Consistent site branding across all pages
+  -->
+        <header>
+            <div class="wrapper">
+                <h1>CyberBridge</h1>
+                <p>Beginner's Cybersecurity Learning &amp; Safety Hub</p>
+            </div>
+        </header>
+
+        <!-- 
+    NAVIGATION SECTION
+    Main navigation with current page highlighted
+  -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- Current page marked as active -->
+                <li><a href="tutorials.html" class="active">Learning Hub</a></li>
+                <li><a href="safety_tips.html">Safety Tips</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!--
+    MAIN CONTENT AREA
+    Contains learning modules in a structured layout
+  -->
+        <main>
+            <div class="wrapper">
+                <!-- PAGE INTRODUCTION -->
+                <article>
+                    <h2>Cyber Basics Learning Path</h2>
+                    <p>
+                        Welcome to the CyberBridge Learning Hub! This structured learning path introduces foundational
+                        cybersecurity concepts in a beginner-friendly sequence. Each module builds upon the previous
+                        one, taking you from understanding how the internet works to implementing advanced protection
+                        strategies.
+                    </p>
+                    <p>
+                        <strong>Estimated completion time:</strong> 2-3 hours total<br>
+                        <strong>Prerequisites:</strong> Basic computer literacy<br>
+                        <strong>Target audience:</strong> University students, faculty, and staff
+                    </p>
+                </article>
+
+                <!-- Video For Beginners -->
+                <section aria-label="Introductory Video">
+                    <h3>Video: Cybersecurity for Beginners</h3>
+                    <div class="card">
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/3oTLTijODA4?si=Qe2Bel909w3eVyzh"
+                            title="YouTube video player"
+                            style="border: 0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                        <p><small>Video source: Edureka - Comprehensive introduction to digital security.</small></p>
+                    </div>
+                </section>
+
+                <!-- 
+        LEARNING MODULES SECTION
+        Contains all 5 learning modules in a list format
+      -->
+                <section aria-label="Learning modules">
+                    <h2>Learning Modules</h2>
+
+                    <div class="module-list">
+                        <!-- MODULE 1 -->
+                        <article class="module" id="module1">
+                            <div class="module__icon">
+                                <!-- Image with descriptive alt text -->
+                                <img
+                                    src="images/icon_network.png"
+                                    alt="Network icon representing web infrastructure"
+                                    width="80"
+                                    height="80">
+                            </div>
+                            <div class="module__content">
+                                <span class="module__label">Module 1</span>
+                                <h3>How the Web Works</h3>
+                                <p>
+                                    Before you can protect yourself online, you need to understand how the internet
+                                    actually works. This module explains the journey data takes from your browser to a
+                                    website and back, introducing key concepts like IP addresses, DNS, and HTTP/HTTPS
+                                    protocols.
+                                </p>
+                                <p>
+                                    Understanding these fundamentals helps you recognise when something suspicious is
+                                    happening with your connection, such as man-in-the-middle attacks or unsecured
+                                    connections.
+                                </p>
+                                <h4>Key Learning Points:</h4>
+                                <ul class="module__points">
+                                    <li>How browsers communicate with web servers</li>
+                                    <li>The role of IP addresses and DNS in internet connectivity</li>
+                                    <li>Difference between HTTP and HTTPS (secure connections)</li>
+                                    <li>How data packets travel across networks</li>
+                                    <li>Introduction to encryption in transit</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- MODULE 2 -->
+                        <article class="module" id="module2">
+                            <div class="module__icon">
+                                <img
+                                    src="images/icon_threats.png"
+                                    alt="Warning icon representing cyber threats"
+                                    width="80"
+                                    height="80">
+                            </div>
+                            <div class="module__content">
+                                <span class="module__label">Module 2</span>
+                                <h3>Identifying Everyday Threats</h3>
+                                <p>
+                                    Cyber threats aren't just for large corporations—students are frequent targets. This
+                                    module helps you recognise the most common threats you'll encounter, from suspicious
+                                    emails to malicious downloads, with real-world examples relevant to university life.
+                                </p>
+                                <p>
+                                    You'll learn to identify the warning signs of phishing attempts, understand how
+                                    malware spreads, and recognise social engineering tactics that attackers use to
+                                    manipulate victims.
+                                </p>
+                                <h4>Key Learning Points:</h4>
+                                <ul class="module__points">
+                                    <li>Types of phishing: email, SMS (smishing), and voice (vishing)</li>
+                                    <li>Recognising suspicious email characteristics</li>
+                                    <li>Understanding malware types: viruses, worms, trojans, ransomware</li>
+                                    <li>Social engineering tactics and psychological manipulation</li>
+                                    <li>Fake websites and how to spot them</li>
+                                    <li>Common student-targeted scams (fake scholarships, job offers)</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- MODULE 3 -->
+                        <article class="module" id="module3">
+                            <div class="module__icon">
+                                <img
+                                    src="images/icon_network.png"
+                                    alt="Shield icon representing digital identity protection"
+                                    width="80"
+                                    height="80">
+                            </div>
+                            <div class="module__content">
+                                <span class="module__label">Module 3</span>
+                                <h3>Protecting Your Digital Identity</h3>
+                                <p>
+                                    Your digital identity is valuable—both to you and to cybercriminals. This module
+                                    covers strategies for protecting your personal information online, from creating
+                                    strong passwords to understanding what data you're sharing and with whom.
+                                </p>
+                                <p>
+                                    You'll learn about identity theft risks, how to monitor your digital footprint, and
+                                    practical steps to secure your online accounts against unauthorised access.
+                                </p>
+                                <h4>Key Learning Points:</h4>
+                                <ul class="module__points">
+                                    <li>Creating strong, memorable passphrases</li>
+                                    <li>Using password managers effectively</li>
+                                    <li>Setting up and using multi-factor authentication (MFA)</li>
+                                    <li>Understanding what personal data you share online</li>
+                                    <li>Privacy settings on common platforms</li>
+                                    <li>Recognising and preventing identity theft</li>
+                                    <li>Checking if your accounts have been compromised</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- MODULE 4 -->
+                        <article class="module" id="module4">
+                            <div class="module__icon">
+                                <img
+                                    src="images/icon_threats.png"
+                                    alt="Social media icon representing online social platforms"
+                                    width="80"
+                                    height="80">
+                            </div>
+                            <div class="module__content">
+                                <span class="module__label">Module 4</span>
+                                <h3>Safe Social Media Practices</h3>
+                                <p>
+                                    Social media is an essential part of student life, but it comes with significant
+                                    security and privacy risks. This module teaches you how to enjoy social platforms
+                                    while minimising your exposure to threats and protecting your personal information.
+                                </p>
+                                <p>
+                                    From understanding what information is visible to others to recognising social
+                                    media-based attacks, you'll gain the skills to navigate these platforms safely.
+                                </p>
+                                <h4>Key Learning Points:</h4>
+                                <ul class="module__points">
+                                    <li>Privacy settings on Instagram, Facebook, Twitter/X, and LinkedIn</li>
+                                    <li>Understanding who can see your posts and profile</li>
+                                    <li>Risks of oversharing (location, schedule, personal details)</li>
+                                    <li>Recognising fake profiles and impersonation attempts</li>
+                                    <li>Dealing with cyberbullying and harassment</li>
+                                    <li>Digital reputation management for future employment</li>
+                                    <li>Third-party app permissions and data access</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- MODULE 5 -->
+                        <article class="module" id="module5">
+                            <div class="module__icon">
+                                <img
+                                    src="images/icon_network.png"
+                                    alt="Campus network icon representing university connectivity"
+                                    width="80"
+                                    height="80">
+                            </div>
+                            <div class="module__content">
+                                <span class="module__label">Module 5</span>
+                                <h3>Campus Network Security</h3>
+                                <p>
+                                    University campuses present unique cybersecurity challenges. Shared computers,
+                                    public Wi-Fi networks, and collaborative online environments require special
+                                    precautions. This module focuses on staying secure specifically within the
+                                    university context.
+                                </p>
+                                <p>
+                                    You'll learn best practices for using campus resources safely, protecting your work
+                                    on shared devices, and securing your connection when working remotely.
+                                </p>
+                                <h4>Key Learning Points:</h4>
+                                <ul class="module__points">
+                                    <li>Safely using campus Wi-Fi (eduroam and guest networks)</li>
+                                    <li>Protecting your session on shared library computers</li>
+                                    <li>Secure use of learning management systems (Blackboard, Canvas)</li>
+                                    <li>VPN usage for off-campus access to university resources</li>
+                                    <li>Secure file sharing and collaboration</li>
+                                    <li>Protecting research data and academic work</li>
+                                    <li>University IT policies and why they matter</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- NEXT STEPS SECTION -->
+                <article class="mt-2">
+                    <h2>Continue Your Learning</h2>
+                    <p>After completing these modules, reinforce your knowledge by:</p>
+                    <ul>
+                        <li>Reviewing the <a href="safety_tips.html">Core 4 Protective Habits</a></li>
+                        <li>Exploring our <a href="resources.html">Resource Library</a> for advanced topics</li>
+                        <li>Testing your knowledge with our practical exercises</li>
+                        <li>Sharing what you've learned with fellow students</li>
+                    </ul>
+                    <p>
+                        Remember: Cybersecurity is not a one-time task but an ongoing practice. Stay curious, stay
+                        vigilant, and stay safe online!
+                    </p>
+                </article>
+            </div>
+        </main>
+
+        <!-- 
+    FOOTER SECTION
+    Consistent footer across all pages
+  -->
+        <footer>
+            <div class="wrapper">
+                <p>&copy; 2026 CyberBridge Initiative. All rights reserved.</p>
+                <p>
+                    Help Desk:
+                    <a href="mailto:info@cyberbridge.edu">info@cyberbridge.edu</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

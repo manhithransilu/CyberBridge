@@ -1,0 +1,334 @@
+<!--
+================================================================================
+CyberBridge - Resources Page (resources.html)
+================================================================================
+Author: Manhith Ransilu Sanjeewa (Student ID: 10686639)
+Course: GDI2100 Web Design - Edith Cowan University
+Version: Assignment 2 - Final Website
+Date: 06/02/2026
+
+Content Structure:
+1. Header - Site branding
+2. Navigation - Main site navigation
+3. External Links Section - Trusted cybersecurity organisations (open in new tabs)
+4. Glossary Section - Definition list with 15+ cybersecurity terms
+5. Footer - Contact information and copyright
+================================================================================
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Character encoding and responsive viewport -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- SEO metadata -->
+        <meta
+            name="description"
+            content="CyberBridge Resources - Trusted external cybersecurity links and a comprehensive
+                                    glossary of terms for university students.">
+        <meta name="author" content="Manhith Ransilu Sanjeewa">
+
+        <!-- Page title -->
+        <title>Resources | CyberBridge - External Links &amp; Glossary</title>
+
+        <!-- External stylesheet link -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- HEADER SECTION -->
+        <header>
+            <div class="wrapper">
+                <h1>CyberBridge</h1>
+                <p>Beginner's Cybersecurity Learning &amp; Safety Hub</p>
+            </div>
+        </header>
+
+        <!-- NAVIGATION SECTION  -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tutorials.html">Learning Hub</a></li>
+                <li><a href="safety_tips.html">Safety Tips</a></li>
+                <!-- Current page marked as active -->
+                <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTENT AREA  -->
+        <main>
+            <div class="wrapper">
+                <!-- Page introduction -->
+                <article>
+                    <h2>Trusted Resource Library</h2>
+                    <p>
+                        Expand your cybersecurity knowledge beyond CyberBridge with these trusted external resources.
+                        We've curated links to authoritative organisations that provide reliable, up-to-date information
+                        on digital security. Below, you'll also find our comprehensive glossary of essential
+                        cybersecurity terms.
+                    </p>
+                </article>
+
+                <!-- 
+        EXTERNAL LINKS SECTION
+        Links to trusted cybersecurity organisations
+        All links open in new tabs
+      -->
+                <section aria-label="External cybersecurity resources">
+                    <h2>External Cybersecurity Organisations</h2>
+                    <p>
+                        These organisations provide authoritative guidance on cybersecurity best practices. All links
+                        open in a new tab.
+                    </p>
+
+                    <div class="external-links">
+                        <!-- ACSC - Australian Cyber Security Centre -->
+                        <a href="https://www.cyber.gov.au" target="_blank" rel="noopener" class="external-link">
+                            <div>
+                                <h3>Australian Cyber Security Centre (ACSC)</h3>
+                                <p>
+                                    Australia's lead agency for national cybersecurity. Provides alerts, advice, and
+                                    guidance for individuals and organisations.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- SANS Institute -->
+                        <a href="https://www.sans.org" target="_blank" rel="noopener" class="external-link">
+                            <div>
+                                <h3>SANS Institute</h3>
+                                <p>
+                                    World-renowned cybersecurity training and certification organisation. Offers free
+                                    resources including newsletters and reading room articles.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- Have I Been Pwned -->
+                        <a href="https://haveibeenpwned.com" target="_blank" rel="noopener" class="external-link">
+                            <div>
+                                <h3>Have I Been Pwned</h3>
+                                <p>
+                                    Free service to check if your email or password has appeared in known data breaches.
+                                    Essential tool for personal security monitoring.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- NIST Cybersecurity Framework -->
+                        <a
+                            href="https://www.nist.gov/cyberframework"
+                            target="_blank"
+                            rel="noopener"
+                            class="external-link">
+                            <div>
+                                <h3>NIST Cybersecurity Framework</h3>
+                                <p>
+                                    Comprehensive framework for managing and reducing cybersecurity risk.
+                                    Industry-standard reference used by organisations worldwide.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- StaySafeOnline -->
+                        <a href="https://staysafeonline.org" target="_blank" rel="noopener" class="external-link">
+                            <div>
+                                <h3>StaySafeOnline</h3>
+                                <p>
+                                    Consumer-focused cybersecurity resources from the National Cyber Security Alliance.
+                                    Great for practical, everyday security tips.
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- eSafety Commissioner -->
+                        <a href="https://www.esafety.gov.au" target="_blank" rel="noopener" class="external-link">
+                            <div>
+                                <h3>eSafety Commissioner</h3>
+                                <p>
+                                    Australia's independent regulator for online safety. Provides resources for dealing
+                                    with cyberbullying, image-based abuse, and online harassment.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- 
+        GLOSSARY SECTION
+        Definition list with 15+ cybersecurity terms
+      -->
+                <section aria-label="Cybersecurity glossary">
+                    <h2>Cybersecurity Glossary</h2>
+                    <p>
+                        Understanding cybersecurity terminology is the first step to protecting yourself online. Here's
+                        a comprehensive glossary of essential terms every student should know.
+                    </p>
+
+                    <div class="glossary">
+                        <dl>
+                            <!-- 
+              GLOSSARY TERMS
+              Alphabetically ordered for easy reference
+              Each term (dt) is followed by its definition (dd)
+            -->
+
+                            <dt>Authentication</dt>
+                            <dd>
+                                The process of verifying the identity of a user, device, or system. This typically
+                                involves something you know (password), something you have (phone), or something you are
+                                (biometrics).
+                            </dd>
+
+                            <dt>Botnet</dt>
+                            <dd>
+                                A network of compromised computers (called "bots" or "zombies") controlled by an
+                                attacker. Botnets are used for distributed denial-of-service attacks, spam distribution,
+                                and credential theft.
+                            </dd>
+
+                            <dt>Brute Force Attack</dt>
+                            <dd>
+                                A method of cracking passwords by systematically trying every possible combination until
+                                the correct one is found. Strong passwords and account lockouts help prevent these
+                                attacks.
+                            </dd>
+
+                            <dt>Data Breach</dt>
+                            <dd>
+                                An incident where sensitive, protected, or confidential data is copied, transmitted,
+                                viewed, stolen, or used by an unauthorised individual. Breaches can expose personal
+                                information, passwords, and financial details.
+                            </dd>
+
+                            <dt>Encryption</dt>
+                            <dd>
+                                The process of converting information into a code to prevent unauthorised access.
+                                Encrypted data can only be read by someone with the correct decryption key. HTTPS uses
+                                encryption to secure web traffic.
+                            </dd>
+
+                            <dt>Firewall</dt>
+                            <dd>
+                                A network security system that monitors and controls incoming and outgoing network
+                                traffic based on predetermined security rules. Acts as a barrier between trusted and
+                                untrusted networks.
+                            </dd>
+
+                            <dt>Keylogger</dt>
+                            <dd>
+                                Malicious software or hardware that records keystrokes on a device. Used to capture
+                                passwords, credit card numbers, and other sensitive information as users type.
+                            </dd>
+
+                            <dt>Malware</dt>
+                            <dd>
+                                Short for "malicious software" — any software intentionally designed to cause damage to
+                                a computer, server, client, or network. Includes viruses, worms, trojans, ransomware,
+                                and spyware.
+                            </dd>
+
+                            <dt>Multi-Factor Authentication (MFA)</dt>
+                            <dd>
+                                A security process that requires more than one form of verification to access an
+                                account. Typically combines something you know (password) with something you have
+                                (phone) or something you are (fingerprint). Also called Two-Factor Authentication (2FA).
+                            </dd>
+
+                            <dt>Phishing</dt>
+                            <dd>
+                                A type of social engineering attack where attackers impersonate trusted entities to
+                                trick victims into revealing sensitive information such as login credentials, credit
+                                card numbers, or personal data. Commonly delivered via email.
+                            </dd>
+
+                            <dt>Ransomware</dt>
+                            <dd>
+                                A type of malware that encrypts a victim's files and demands payment (usually in
+                                cryptocurrency) for the decryption key. Can render computers and networks completely
+                                unusable.
+                            </dd>
+
+                            <dt>Social Engineering</dt>
+                            <dd>
+                                Psychological manipulation techniques used to trick people into making security mistakes
+                                or giving away sensitive information. Exploits human psychology rather than technical
+                                vulnerabilities.
+                            </dd>
+
+                            <dt>Spyware</dt>
+                            <dd>
+                                Software that secretly gathers information about a person or organisation and sends it
+                                to another party without consent. Can monitor browsing habits, capture keystrokes, and
+                                steal personal data.
+                            </dd>
+
+                            <dt>Trojan Horse</dt>
+                            <dd>
+                                Malware disguised as legitimate software. Unlike viruses, trojans don't replicate
+                                themselves but create a backdoor for attackers to access your system. Often distributed
+                                through email attachments or fake downloads.
+                            </dd>
+
+                            <dt>Two-Factor Authentication (2FA)</dt>
+                            <dd>
+                                See Multi-Factor Authentication. A specific type of MFA that requires exactly two forms
+                                of verification—typically a password and a code sent to your phone.
+                            </dd>
+
+                            <dt>Virtual Private Network (VPN)</dt>
+                            <dd>
+                                A service that creates an encrypted connection between your device and a server,
+                                protecting your internet traffic from interception. Essential when using public Wi-Fi
+                                networks.
+                            </dd>
+
+                            <dt>Virus</dt>
+                            <dd>
+                                A type of malware that attaches itself to legitimate programs and spreads when those
+                                programs are shared. Unlike worms, viruses require human action (like opening a file) to
+                                spread.
+                            </dd>
+
+                            <dt>Worm</dt>
+                            <dd>
+                                Self-replicating malware that spreads across networks without human intervention. Worms
+                                can consume bandwidth, delete files, or install backdoors for future access.
+                            </dd>
+
+                            <dt>Zero-Day Vulnerability</dt>
+                            <dd>
+                                A software security flaw unknown to the vendor or developer, with no available patch.
+                                Called "zero-day" because developers have had zero days to fix the issue before it's
+                                exploited.
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+
+                <!-- ADDITIONAL RESOURCES NOTE -->
+                <article class="mt-2">
+                    <h2>Suggest a Resource</h2>
+                    <p>
+                        Know of a trustworthy cybersecurity resource we should include? We're always looking to expand
+                        our library with quality content.
+                        <a href="contact.html">Contact us</a> with your suggestions!
+                    </p>
+                </article>
+            </div>
+        </main>
+
+        <!-- FOOTER SECTION  -->
+        <footer>
+            <div class="wrapper">
+                <p>&copy; 2026 CyberBridge Initiative. All rights reserved.</p>
+                <p>
+                    Help Desk:
+                    <a href="mailto:info@cyberbridge.edu">info@cyberbridge.edu</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

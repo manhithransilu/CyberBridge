@@ -1,0 +1,892 @@
+/*
+Author: Manhith Ransilu Sanjeewa (Student ID: 10686639)
+Course: GDI2100 Web Design - Edith Cowan University
+Version: Assignment 2 - CyberBridge
+Date: 06/02/2026
+
+Colors:
+- Primary: Deep Blue (#1a365d)
+- Secondary: Teal (#319795)
+- Accent: Orange (#ed8936)
+- Background: Light Gray (#f7fafc)
+- Text: Dark Gray (#2d3748)
+*/
+
+/* =============================================================================
+   BASE STYLES
+   Purpose: Normalize browser defaults and establish consistent base styling
+   across all browsers. This prevents inconsistent rendering.
+   =============================================================================
+*/
+
+/* Universal box-sizing which ensures padding and border are included in width */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base HTML element which sets root font size for rem calculations */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+/* Body styles for main typography and background */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2d3748;
+    background-color: #f7fafc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* For sticky footer layout */
+}
+
+/* =============================================================================
+   TYPOGRAPHY
+   Purpose: Define consistent heading styles, paragraph spacing, and text
+   formatting throughout the website.
+   =============================================================================
+*/
+
+/* Heading styles with clear visual hierarchy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1a365d;
+    margin-bottom: 1rem;
+}
+
+/* Main page title - largest heading */
+h1 {
+    font-size: 2.5rem;
+}
+
+/* Section headings */
+h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid #319795;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Sub-section headings */
+h3 {
+    font-size: 1.5rem;
+    color: #319795;
+}
+
+/* Card/component headings */
+h4 {
+    font-size: 1.25rem;
+}
+
+/* Paragraph spacing */
+p {
+    margin-bottom: 1rem;
+}
+
+/* Link styles for consistent interactive states */
+a {
+    color: #319795;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+a:hover,
+a:focus {
+    color: #1a365d;
+    text-decoration: underline;
+}
+
+/* Focus state for accessibility for visible keyboard navigation */
+a:focus {
+    outline: 2px solid #ed8936;
+    outline-offset: 2px;
+}
+
+/* =============================================================================
+   LAYOUT WRAPPER
+   Purpose: Constrain content width and center it on larger screens.
+   This improves readability by preventing overly long line lengths.
+   =============================================================================
+*/
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+/* =============================================================================
+   HEADER COMPONENT
+   Purpose: Site branding and identity at the top of every page.
+   Uses Flexbox for centering content.
+   =============================================================================
+*/
+
+header {
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Site title in header */
+header h1 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* subtitle styling */
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* =============================================================================
+   NAVIGATION COMPONENT
+   Purpose: Main site navigation using an unordered list styled as a
+   horizontal menu bar. Uses Flexbox for layout.
+   =============================================================================
+*/
+
+nav {
+    background-color: #2d3748;
+    padding: 0;
+    position: sticky; /* Sticky navigation to stays visible on scroll */
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation list */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation list items */
+nav li {
+    margin: 0;
+}
+
+/* Navigation links - styled as buttons */
+nav a {
+    display: block;
+    color: white;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+/* Hover and focus states for navigation */
+nav a:hover,
+nav a:focus {
+    background-color: #1a365d;
+    color: #ed8936;
+    text-decoration: none;
+    border-bottom: 3px solid #ed8936;
+}
+
+/* Active page indicator */
+nav a.active {
+    background-color: #1a365d;
+    border-bottom: 3px solid #319795;
+}
+
+/* =============================================================================
+   MAIN CONTENT AREA
+   Purpose: Primary content container. Uses flex-grow to push footer
+   to bottom of viewport when content is short.
+   =============================================================================
+*/
+main {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+/* =============================================================================
+   HERO SECTION (HOME PAGE)
+   Purpose: Large banner section with background image for visual impact
+   on the home page. Creates strong first impression.
+   =============================================================================
+*/
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+/* Hero with background image */
+.hero--with-image {
+    background-image: linear-gradient(rgba(26, 54, 93, 0.85), rgba(44, 82, 130, 0.85)), url("images/students_hero.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.hero h2 {
+    text-shadow: 2px 2px 2px white;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.95;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* =============================================================================
+   ARTICLE & SECTION COMPONENTS
+   Purpose: Content sections with consistent styling. Articles are used
+   for standalone content blocks.
+   =============================================================================
+*/
+article {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* =============================================================================
+   CARD GRID LAYOUT (HOME PAGE FEATURES)
+   Purpose: Three-column grid for feature cards on home page.
+   Uses CSS Grid for responsive layout.
+   =============================================================================
+*/
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Individual card styling */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid #319795;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Card hover effect to subtle lift */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Card with alert styling to orange accent for warnings */
+.card--alert {
+    border-top-color: #ed8936;
+}
+
+/* Card title */
+.card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+/* Card list styling */
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.card li:last-child {
+    border-bottom: none;
+}
+
+/* =============================================================================
+   ALERT BOXES
+   Purpose: Highlight important security alerts and warnings.
+   Uses distinct colors to draw attention.
+   =============================================================================
+*/
+
+.alert {
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border-left: 4px solid;
+}
+
+/* Critical alert - red styling */
+.alert--critical {
+    background-color: #fff5f5;
+    border-left-color: #c53030;
+    color: #c53030;
+}
+
+/* Warning alert - orange styling */
+.alert--warning {
+    background-color: #fffaf0;
+    border-left-color: #ed8936;
+    color: #c05621;
+}
+
+/* Info alert - blue styling */
+.alert--info {
+    background-color: #ebf8ff;
+    border-left-color: #3182ce;
+    color: #2b6cb0;
+}
+
+/* =============================================================================
+   LEARNING MODULES (TUTORIALS PAGE)
+   Purpose: Styled module cards for the Learning Hub page.
+   Each module includes an icon, title, and description.
+   =============================================================================
+*/
+
+.module-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.module {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    border-left: 4px solid #319795;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.module:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Module icon container */
+.module__icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.module__icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Module content area */
+.module__content {
+    flex: 1;
+}
+
+.module__content h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Module number/label */
+.module__label {
+    display: inline-block;
+    background-color: #319795;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Key learning points list */
+.module__points {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.module__points li {
+    margin-bottom: 0.5rem;
+}
+
+/* =============================================================================
+   SAFETY TIPS (SAFETY TIPS PAGE)
+   Purpose: Numbered habit cards for the "Core 4" protective habits.
+   Uses counter for automatic numbering.
+   =============================================================================
+*/
+
+.habit-list {
+    counter-reset: habit-counter;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.habit {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    padding-left: 5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+    counter-increment: habit-counter;
+}
+
+/* Large number indicator using CSS counter */
+.habit::before {
+    content: counter(habit-counter);
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #319795 0%, #38b2ac 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.habit h3 {
+    margin-bottom: 1rem;
+}
+
+/* =============================================================================
+   DEFINITION LIST (GLOSSARY)
+   Purpose: Styled definition list for the cybersecurity glossary.
+   Terms are highlighted and definitions are clearly formatted.
+   =============================================================================
+*/
+
+.glossary {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.glossary dt {
+    font-weight: 700;
+    color: #1a365d;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.glossary dt:first-child {
+    margin-top: 0;
+}
+
+.glossary dd {
+    margin-left: 1.5rem;
+    padding: 0.75rem 0;
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+/* =============================================================================
+   EXTERNAL LINKS SECTION
+   Purpose: Styled list of external resource links.
+   Links open in new tabs (indicated with arrow icon).
+  =============================================================================
+*/
+
+.external-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.external-link {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid transparent;
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.external-link:hover {
+    border-color: #319795;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.external-link h3 {
+    color: #1a365d;
+    margin-bottom: 0.25rem;
+}
+
+.external-link p {
+    color: #718096;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* External link icon indicator */
+.external-link::after {
+    content: "↗";
+    font-size: 1.25rem;
+    color: #319795;
+    margin-left: auto;
+}
+
+/* =============================================================================
+   CONTACT PAGE COMPONENTS
+   Purpose: Contact information layout and Google Maps embed styling.
+   =============================================================================
+*/
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.contact-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info h3 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #319795;
+}
+
+/* Address block styling */
+address {
+    font-style: normal;
+    line-height: 1.8;
+}
+
+/* Map container to maintains aspect ratio */
+.map-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.map-container h3 {
+    margin-bottom: 1rem;
+}
+
+/* Responsive iframe container */
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* =============================================================================
+   FOOTER COMPONENT
+   Purpose: Site footer with copyright and contact information.
+   Consistent with header styling for visual cohesion.
+   =============================================================================
+*/
+footer {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: auto; /* Push to bottom of page */
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+footer a {
+    color: #68d391;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* =============================================================================
+   UTILITY CLASSES
+   Purpose: Reusable helper classes for common styling needs.
+   =============================================================================
+*/
+/* Text alignment */
+.text-center {
+    text-align: center;
+}
+
+/* Margin utilities */
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+/* Screen reader only, it is visually hidden but accessible */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* =============================================================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   Purpose: Adapt layout for different screen sizes.
+   Uses mobile-first approach with breakpoints for larger screens.
+   - Tablet: 768px and below
+   - Mobile: 480px and below
+   =============================================================================
+*/
+
+/* Tablet breakpoint */
+@media screen and (max-width: 768px) {
+    /* Reduce heading sizes for smaller screens */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    /* Stack navigation vertically on tablets */
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        text-align: center;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #4a5568;
+    }
+
+    nav li:last-child a {
+        border-bottom: none;
+    }
+
+    /* Stack card grid to 2 columns */
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* Stack external links vertically */
+    .external-links {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stack contact grid vertically */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjust module layout */
+    .module {
+        flex-direction: column;
+        padding-left: 2rem;
+    }
+
+    .module__icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Adjust habit card padding */
+    .habit {
+        padding-left: 4rem;
+    }
+
+    .habit::before {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+        left: 1rem;
+        top: 1rem;
+    }
+}
+
+/* Mobile breakpoint */
+@media screen and (max-width: 480px) {
+    /* Further reduce heading sizes */
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Single column card grid on mobile */
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reduce wrapper padding */
+    .wrapper {
+        padding: 0 1rem;
+    }
+
+    /* Reduce section padding */
+    article {
+        padding: 1.5rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .module {
+        padding: 1.5rem;
+    }
+
+    .habit {
+        padding: 1.5rem;
+        padding-left: 3.5rem;
+    }
+
+    /* Adjust navigation link sizing */
+    nav a {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* =============================================================================
+   PRINT STYLES
+   Purpose: Optimized styling for printed output.
+   Removes backgrounds and non-essential elements.
+  =============================================================================
+*/
+
+@media print {
+    /* Remove backgrounds for ink conservation */
+    header,
+    nav,
+    footer {
+        background: none;
+        color: black;
+    }
+
+    /* Remove box shadows */
+    .card,
+    .module,
+    .habit,
+    article {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    /* Hide navigation on print */
+    nav {
+        display: none;
+    }
+
+    /* Ensure links show their URLs */
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    /* Don't show URL for internal links */
+    a[href^="#"]::after,
+    a[href^="mailto:"]::after {
+        content: "";
+    }
+}
