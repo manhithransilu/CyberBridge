@@ -266,7 +266,7 @@ main {
 
 .hero h2 {
     text-shadow: 2px 2px 2px black;
-    color: white;
+    color:white;
 }
 
 .hero p {
@@ -911,5 +911,6 @@ footer a:hover {
         content: "";
     }
 }
+
 
 
